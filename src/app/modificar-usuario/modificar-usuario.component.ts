@@ -31,6 +31,7 @@ export class ModificarUsuarioComponent implements OnInit {
         descripcion: [this.usuario.descripcion, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.usuario.imageUrl, [Validators.required, Validators.nullValidator]],
         puntuacion: [this.usuario.puntuacion, [Validators.required, Validators.nullValidator]]
+        //
       });
     })
   }
