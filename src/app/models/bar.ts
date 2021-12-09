@@ -5,8 +5,8 @@ export interface Bar {
     musicTaste: String;
     owner: String;
     idOwner: String;
-    aforo: Number;
-    aforoMax: Number;
+    aforo: String;
+    aforoMax: String;
     horario: String;
     descripcion: String;
     imageUrl: String;
