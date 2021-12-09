@@ -4,7 +4,7 @@ export interface Usuario {
     password: String;
     email: String;
     nombre: String;
-    edad: Number;
+    edad: String;
     descripcion: String;
     imageUrl: String;
     puntuacion: Number;

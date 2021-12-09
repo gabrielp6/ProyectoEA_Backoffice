@@ -34,7 +34,7 @@ export class NuevousuarioComponent implements OnInit {
     const password = this.usuarioForm.value.password;
     const email = this.usuarioForm.value.email;
     const nombre = "";
-    const edad = 0;
+    const edad = "";
     const descripcion = "";
     const imageUrl = "";
     const puntuacion = 0;
