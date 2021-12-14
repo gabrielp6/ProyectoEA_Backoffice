@@ -10,4 +10,5 @@ export interface Bar {
     horario: String;
     descripcion: String;
     imageUrl: String;
+    agresion: String;
 }

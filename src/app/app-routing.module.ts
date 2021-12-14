@@ -11,6 +11,10 @@ import { NuevacomunidadComponent } from './nuevacomunidad/nuevacomunidad.compone
 import { VerComunidadComponent } from './ver-comunidad/ver-comunidad.component';
 import { ModificarComunidadComponent } from './modificar-comunidad/modificar-comunidad.component';
 import { UsuarioToComunidadComponent } from './usuarioToComunidad/usuarioToComunidad.component';
+import { NuevapublicacionComponent } from './nuevapublicacion/nuevapublicacion.component';
+import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.component';
+import { ModificarPublicacionComponent } from './modificar-publicacion/modificar-publicacion.component';
+
 
 
 const routes: Routes = [
@@ -25,7 +29,10 @@ const routes: Routes = [
   { path: 'nuevacomunidad', component: NuevacomunidadComponent},
   { path: 'vercomunidad/:id', component: VerComunidadComponent},
   { path: 'modificarcomunidad/:id', component: ModificarComunidadComponent},
-  { path: 'usuariotocomunidad', component: UsuarioToComunidadComponent}
+  { path: 'usuariotocomunidad', component: UsuarioToComunidadComponent},
+  { path: 'nuevapublicacion', component: NuevapublicacionComponent},
+  { path: 'modificarpublicacion/:id', component: ModificarPublicacionComponent},
+  { path: 'verpublicacion/:id', component: VerPublicacionComponent}
 ];
 
 @NgModule({

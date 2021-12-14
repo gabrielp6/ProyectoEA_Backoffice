@@ -33,6 +33,7 @@ export class ModificarbarComponent implements OnInit {
         horario: [this.bar.horario, [Validators.required, Validators.nullValidator]],
         descripcion: [this.bar.descripcion, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.bar.imageUrl, [Validators.required, Validators.nullValidator]],
+        agresion: [this.bar.agresion, [Validators.required, Validators.nullValidator]],
       });
     })
   }
@@ -60,9 +61,10 @@ export class ModificarbarComponent implements OnInit {
     const horario = this.barForm.value.horario;
     const descripcion = this.barForm.value.descripcion;
     const imageUrl = this.barForm.value.imageUrl;
+    const agresion = this.barForm.value.agresion;
 
 
-    const barmodificado = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, "owner": owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl};
+    const barmodificado = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, "owner": owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion};
     this.barService.modificarBar(barmodificado, this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.router.navigateByUrl('/principal');
     })

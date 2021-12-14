@@ -116,6 +116,16 @@
       </ng-container>
     </p>
 
+    <p>
+      Agresion: <input type="string" placeholder="Agresion" formControlName="agresion" />*
+      <ng-container
+        *ngIf="!formControls.agresion.valid &&formControls.agresion.touched">
+        <p *ngIf="formControls.agresion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
       <p>
         <input type="submit" value="Eliminar" (click) = "delete()" />
         <input type="submit" value="Modificar" [disabled]="barForm.invalid" />

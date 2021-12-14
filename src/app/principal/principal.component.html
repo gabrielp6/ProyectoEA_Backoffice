@@ -45,5 +45,19 @@
             [comunidad]="comunidad">
         </app-datos-comunidades>
     </div>
+</div>
+
+    <div class="lista">
+        <h2>LISTA DE PUBLICACIONES</h2>
+    
+        <div>
+            <button (click)="nuevaPublicacion()" class="button"> AÑADIR PUBLICACION</button>
+        </div>
+    
+        <div>
+            <app-datos-publicacion *ngFor="let publicacion of publicaciones"
+                [publicacion]="publicacion">
+            </app-datos-publicacion>
+        </div>
 
 </div>
