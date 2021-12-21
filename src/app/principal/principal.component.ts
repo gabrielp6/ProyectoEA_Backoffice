@@ -6,8 +6,6 @@ import { UsuarioService } from '../services/usuario.service';
 import { Bar } from '../models/bar';
 import { Comunidad } from '../models/comunidad';
 import { ComunidadService } from '../services/comunidad.service';
-import { Publicacion } from '../models/publicacion';
-import { PublicacionService } from '../services/publicacion.service';
 
 @Component({
   selector: 'app-principal',
@@ -19,9 +17,12 @@ export class PrincipalComponent implements OnInit {
   bares: Bar[];
   usuarios : Usuario[];
   comunidades: Comunidad[];
-  publicaciones: Publicacion[];
 
-  constructor(private router: Router, private publicacionService: PublicacionService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService) { }
+  userChat={
+    name:''
+  }
+
+  constructor(private router: Router,  private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService) { }
 
   ngOnInit(): void {
 
@@ -37,9 +38,7 @@ export class PrincipalComponent implements OnInit {
       this.comunidades = data;
     })
 
-    this.publicacionService.getPublicaciones().subscribe(data =>{
-      this.publicaciones = data;
-    })
+   
   }
   
 
@@ -59,8 +58,6 @@ export class PrincipalComponent implements OnInit {
     this.router.navigateByUrl('/usuariotocomunidad');
   }
 
-  nuevaPublicacion(){
-    this.router.navigateByUrl('/nuevapublicacion');
-  }
+  
 
 }

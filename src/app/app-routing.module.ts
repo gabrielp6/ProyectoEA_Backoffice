@@ -11,11 +11,9 @@ import { NuevacomunidadComponent } from './nuevacomunidad/nuevacomunidad.compone
 import { VerComunidadComponent } from './ver-comunidad/ver-comunidad.component';
 import { ModificarComunidadComponent } from './modificar-comunidad/modificar-comunidad.component';
 import { UsuarioToComunidadComponent } from './usuarioToComunidad/usuarioToComunidad.component';
-import { NuevapublicacionComponent } from './nuevapublicacion/nuevapublicacion.component';
-import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.component';
-import { ModificarPublicacionComponent } from './modificar-publicacion/modificar-publicacion.component';
 
 
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/principal' },
@@ -30,9 +28,7 @@ const routes: Routes = [
   { path: 'vercomunidad/:id', component: VerComunidadComponent},
   { path: 'modificarcomunidad/:id', component: ModificarComunidadComponent},
   { path: 'usuariotocomunidad', component: UsuarioToComunidadComponent},
-  { path: 'nuevapublicacion', component: NuevapublicacionComponent},
-  { path: 'modificarpublicacion/:id', component: ModificarPublicacionComponent},
-  { path: 'verpublicacion/:id', component: VerPublicacionComponent}
+  { path:'chat/:id', component: ChatComponent}
 ];
 
 @NgModule({

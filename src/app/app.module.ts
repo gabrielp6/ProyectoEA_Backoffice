@@ -19,10 +19,7 @@ import { DatosComunidadesComponent } from './datos-comunidades/datos-comunidades
 import { ModificarComunidadComponent } from './modificar-comunidad/modificar-comunidad.component';
 import { VerComunidadComponent } from './ver-comunidad/ver-comunidad.component';
 import { UsuarioToComunidadComponent } from './usuarioToComunidad/usuarioToComunidad.component';
-import { NuevapublicacionComponent } from './nuevapublicacion/nuevapublicacion.component';
-import { ModificarPublicacionComponent } from './modificar-publicacion/modificar-publicacion.component';
-import { DatosPublicacionComponent } from './datos-publicacion/datos-publicacion.component';
-import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -41,10 +38,7 @@ import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.compo
     ModificarComunidadComponent,
     VerComunidadComponent,
     UsuarioToComunidadComponent,
-    NuevapublicacionComponent,
-    ModificarPublicacionComponent,
-    DatosPublicacionComponent,
-    VerPublicacionComponent
+    ChatComponent
   ],
   imports: [
     BrowserModule,

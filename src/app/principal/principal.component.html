@@ -47,17 +47,11 @@
     </div>
 </div>
 
-    <div class="lista">
-        <h2>LISTA DE PUBLICACIONES</h2>
+
+<div class="card p.5">
+    <h2>Escribe la comunidad y únete al chat</h2>
+    <input type="text" class="form-control" [(ngModel)]="userChat.name">
     
-        <div>
-            <button (click)="nuevaPublicacion()" class="button"> AÑADIR PUBLICACION</button>
-        </div>
-    
-        <div>
-            <app-datos-publicacion *ngFor="let publicacion of publicaciones"
-                [publicacion]="publicacion">
-            </app-datos-publicacion>
-        </div>
+    <a href=" class=btn btn-primary" [routerLink]="['/chat', userChat.name]">Unirme al chat</a>
 
 </div>
