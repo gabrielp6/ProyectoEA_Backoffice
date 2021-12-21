@@ -37,12 +37,12 @@ export class NuevobarComponent implements OnInit {
     const musicTaste = this.barForm.value.musicTaste;
     const owner = this.barForm.value.owner;
     const idOwner = this.barForm.value.idOwner;
-    const aforo = "";
-    const aforoMax = "";
-    const horario = '';
-    const descripcion = '';
-    const imageUrl = '';
-    const agresion = "";
+    const aforo = " ";
+    const aforoMax = " ";
+    const horario = " ";
+    const descripcion = " ";
+    const imageUrl = " ";
+    const agresion = " ";
 
 
     const bar = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, 'owner': owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion};
