@@ -43,7 +43,7 @@ export class NuevobarComponent implements OnInit {
     const descripcion = " ";
     const imageUrl = " ";
     const agresion = " ";
-
+  //
 
     const bar = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, 'owner': owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion};
     this.barService.addBar(bar).subscribe(data =>{
