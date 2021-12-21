@@ -39,4 +39,8 @@ export class BarService {
   eliminarBar(id: String): Observable<any>{
     return this.http.delete<Bar>(environment.apiURL + "/bares/delete/"+ id);
   }
+
+  getNumberBares(): Observable<any>{
+    return this.http.get<String>(environment.apiURL + 'bares/getNumber')
+  }
 }

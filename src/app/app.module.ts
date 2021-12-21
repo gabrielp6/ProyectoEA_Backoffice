@@ -23,6 +23,11 @@ import { NuevapublicacionComponent } from './nuevapublicacion/nuevapublicacion.c
 import { ModificarPublicacionComponent } from './modificar-publicacion/modificar-publicacion.component';
 import { DatosPublicacionComponent } from './datos-publicacion/datos-publicacion.component';
 import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.component';
+import { VerDenunciaComponent } from './ver-denuncia/ver-denuncia.component';
+import { NuevadenunciaComponent } from './nuevadenuncia/nuevadenuncia.component';
+import { DatosDenunciasComponent } from './datos-denuncias/datos-denuncias.component';
+import { ModificarDenunciaComponent } from './modificar-denuncia/modificar-denuncia.component';
+import { DatosEstadisticasComponent } from './datos-estadisticas/datos-estadisticas.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,12 @@ import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.compo
     NuevapublicacionComponent,
     ModificarPublicacionComponent,
     DatosPublicacionComponent,
-    VerPublicacionComponent
+    VerPublicacionComponent,
+    VerDenunciaComponent,
+    NuevadenunciaComponent,
+    DatosDenunciasComponent,
+    ModificarDenunciaComponent,
+    DatosEstadisticasComponent
   ],
   imports: [
     BrowserModule,

@@ -50,4 +50,8 @@ export class ComunidadService {
   deleteUsuarioToComunidad(idUsuario: String, idcomunidad: String): Observable<any>{
     return this.http.put(environment.apiURL + "/comunidades/deleteUsuario/" + idUsuario + "/comunidad/" + idcomunidad, null);
   }
+
+  getNumberComunidades(): Observable<any>{
+    return this.http.get<Number>(environment.apiURL + 'comunidades/getNumber')
+  }
 }

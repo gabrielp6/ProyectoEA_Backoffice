@@ -8,6 +8,10 @@ import { Comunidad } from '../models/comunidad';
 import { ComunidadService } from '../services/comunidad.service';
 import { Publicacion } from '../models/publicacion';
 import { PublicacionService } from '../services/publicacion.service';
+import { Denuncia } from '../models/denuncia';
+import { DenunciaService } from '../services/denuncia.service';
+import { Estadisticas } from '../models/estadisticas';
+import { EstadisticasService } from '../services/estadisticas.service';
 
 @Component({
   selector: 'app-principal',
@@ -20,8 +24,10 @@ export class PrincipalComponent implements OnInit {
   usuarios : Usuario[];
   comunidades: Comunidad[];
   publicaciones: Publicacion[];
+  denuncias: Denuncia[];
+  estadisticas: Estadisticas[];
 
-  constructor(private router: Router, private publicacionService: PublicacionService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService) { }
+  constructor(private router: Router, private estadisticasService: EstadisticasService, private publicacionService: PublicacionService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService, private denunciaService: DenunciaService) { }
 
   ngOnInit(): void {
 
@@ -40,7 +46,17 @@ export class PrincipalComponent implements OnInit {
     this.publicacionService.getPublicaciones().subscribe(data =>{
       this.publicaciones = data;
     })
+
+    this.denunciaService.getDenuncias().subscribe(data =>{
+      this.denuncias = data;
+    })
+
+    this.estadisticasService.getEstadisticas().subscribe(data =>{
+      this.estadisticas = data;
+    })
   }
+
+
   
 
   nuevoBar(){
@@ -61,6 +77,10 @@ export class PrincipalComponent implements OnInit {
 
   nuevaPublicacion(){
     this.router.navigateByUrl('/nuevapublicacion');
+  }
+
+  nuevaDenuncia(){
+    this.router.navigateByUrl('/nuevadenuncia');
   }
 
 }

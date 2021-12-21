@@ -1,0 +1,41 @@
+<div>
+    <h2>NUEVA DENUNCIA:</h2>
+    <form [formGroup]="denunciaForm" (ngSubmit)="adddenuncia()">
+
+      <p>
+      ID Usuario denunciante: <input type="string" placeholder="ID Usuario" formControlName="idUsuario" />*
+      <ng-container
+        *ngIf="!formControls.idUsuario.valid && formControls.idUsuario.touched">
+        <p *ngIf="formControls.idUsuario.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+  
+
+    <p>
+      ID Publicacion denunciada: <input type="string" placeholder="ID Publicacion" formControlName="idPublicacion" />*
+      <ng-container
+        *ngIf="!formControls.idPublicacion.valid &&formControls.idPublicacion.touched">
+        <p *ngIf="formControls.idPublicacion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Descripcion: <input type="string" placeholder="Descripcion" formControlName="descripcion" />*
+      <ng-container
+        *ngIf="!formControls.descripcion.valid &&formControls.descripcion.touched">
+        <p *ngIf="formControls.descripcion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+      <p>
+        <input type="submit" value="Añadir" [disabled]="denunciaForm.invalid" />
+        <input type="submit" value="Atrás" (click) = "atras()" />
+      </p>
+    </form>
+  </div>

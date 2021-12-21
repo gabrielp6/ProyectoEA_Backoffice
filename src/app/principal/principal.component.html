@@ -60,4 +60,30 @@
             </app-datos-publicacion>
         </div>
 
+
+</div>
+
+
+<div class="lista">
+    <h2>LISTA DE DENUNCIAS</h2>
+
+    <div>
+        <button (click)="nuevaDenuncia()" class="button"> AÑADIR DENUNCIA</button>
+    </div>
+
+    <div>
+        <app-datos-denuncias *ngFor="let denuncia of denuncias"
+            [denuncia]="denuncia">
+        </app-datos-denuncias>
+    </div>
+</div>
+
+<div class= "lista">
+    <h2>ESTADISTICAS</h2>
+
+    <div>
+        <app-datos-estadisticas *ngFor="let estadisticas of estadisticas"
+            [estadisticas]="estadisticas">
+        </app-datos-estadisticas>
+    </div>
 </div>
