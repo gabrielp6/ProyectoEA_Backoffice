@@ -1,4 +1,15 @@
-<div class="lista">
+<div class= "lista">
+    <h2>ESTADISTICAS</h2>
+
+    <div>
+        <app-datos-estadisticas *ngFor="let estadisticas of estadisticas"
+            [estadisticas]="estadisticas">
+        </app-datos-estadisticas>
+    </div>
+</div>
+
+
+<div class="listaUS">
     <h2>LISTA DE USUARIOS</h2>
 
     <div>
@@ -14,7 +25,7 @@
 </div>
 
 
-<div class="lista">
+<div class="listaUS">
     <h2>LISTA DE BARES</h2>
 
     <div>
@@ -29,7 +40,7 @@
 
 </div>
 
-<div class="lista">
+<div class="listaUS">
     <h2>LISTA DE COMUNIDADES</h2>
 
     <div>
@@ -75,15 +86,5 @@
         <app-datos-denuncias *ngFor="let denuncia of denuncias"
             [denuncia]="denuncia">
         </app-datos-denuncias>
-    </div>
-</div>
-
-<div class= "lista">
-    <h2>ESTADISTICAS</h2>
-
-    <div>
-        <app-datos-estadisticas *ngFor="let estadisticas of estadisticas"
-            [estadisticas]="estadisticas">
-        </app-datos-estadisticas>
     </div>
 </div>

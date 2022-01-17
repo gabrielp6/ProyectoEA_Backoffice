@@ -52,6 +52,28 @@
       </ng-container>
     </p>
 
+    <p>
+      Longitud: <input type="string" placeholder="Longitud" formControlName="longitud" />*
+      <ng-container
+       *ngIf="!formControls.longitud.valid && formControls.longitud.touched">
+       <p *ngIf="formControls.longitud.errors.required">
+         Este Campo es Obligatorio
+       </p>
+      </ng-container>
+      
+    </p>
+
+    <p>
+      Latitud: <input type="string" placeholder="Latitud" formControlName="latitud" />*
+      <ng-container
+       *ngIf="!formControls.latitud.valid && formControls.latitud.touched">
+       <p *ngIf="formControls.latitud.errors.required">
+         Este Campo es Obligatorio
+       </p>
+      </ng-container>
+      
+    </p>
+
       <p>
         <input type="submit" value="Añadir" [disabled]="barForm.invalid" />
         <input type="submit" value="Atrás" (click) = "atras()" />

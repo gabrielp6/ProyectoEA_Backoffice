@@ -19,7 +19,9 @@ export class NuevobarComponent implements OnInit {
       address: ['', [Validators.required, Validators.nullValidator]],
       musicTaste: ['', [Validators.required, Validators.nullValidator]],
       owner: ['', [Validators.required, Validators.nullValidator]],
-      idOwner: ['', [Validators.required, Validators.nullValidator]]
+      idOwner: ['', [Validators.required, Validators.nullValidator]],
+      longitud: ['', [Validators.required, Validators.nullValidator]],
+      latitud: ['', [Validators.required, Validators.nullValidator]]
     });
   }
 
@@ -43,9 +45,11 @@ export class NuevobarComponent implements OnInit {
     const descripcion = " ";
     const imageUrl = " ";
     const agresion = " ";
+    const longitud = this.barForm.value.longitud;
+    const latitud = this.barForm.value.latitud;
   //
 
-    const bar = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, 'owner': owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion};
+    const bar = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, 'owner': owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion, "longitud": longitud, "latitud": latitud};
     this.barService.addBar(bar).subscribe(data =>{
       this.router.navigateByUrl('/principal');
     })

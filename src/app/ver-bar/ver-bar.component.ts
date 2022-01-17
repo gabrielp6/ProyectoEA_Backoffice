@@ -36,7 +36,9 @@ export class VerBarComponent implements OnInit {
         horario: [this.bar.horario, [Validators.required, Validators.nullValidator]],
         descripcion: [this.bar.descripcion, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.bar.imageUrl, [Validators.required, Validators.nullValidator]],
-        agresion: [this.bar.agresion, [Validators.required, Validators.nullValidator]]
+        agresion: [this.bar.agresion, [Validators.required, Validators.nullValidator]],
+        longitud: [this.bar.longitud, [Validators.required, Validators.nullValidator]],
+        latitud: [this.bar.latitud, [Validators.required, Validators.nullValidator]]
       });
     })
   }

@@ -1,15 +1,17 @@
 .datos-estadisticas{
     border: solid;
-    height: 150px;
-    width: 300px;
+    height: 230px;
+    width: 1000px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
+    color:bisque;
 }
 
 p{
     text-align: center;
+    font-size: xx-large;
 }
 
 button{

@@ -11,4 +11,6 @@ export interface Bar {
     descripcion: String;
     imageUrl: String;
     agresion: String;
+    longitud: String;
+    latitud: String;
 }
