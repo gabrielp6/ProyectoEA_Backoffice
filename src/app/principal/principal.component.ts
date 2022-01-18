@@ -23,11 +23,9 @@ export class PrincipalComponent implements OnInit {
   bares: Bar[];
   usuarios : Usuario[];
   comunidades: Comunidad[];
-  publicaciones: Publicacion[];
-  denuncias: Denuncia[];
   estadisticas: Estadisticas[];
 
-  constructor(private router: Router, private estadisticasService: EstadisticasService, private publicacionService: PublicacionService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService, private denunciaService: DenunciaService) { }
+  constructor(private router: Router, private estadisticasService: EstadisticasService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService) { }
 
   ngOnInit(): void {
 
@@ -43,21 +41,16 @@ export class PrincipalComponent implements OnInit {
       this.comunidades = data;
     })
 
-    this.publicacionService.getPublicaciones().subscribe(data =>{
-      this.publicaciones = data;
-    })
-
-    this.denunciaService.getDenuncias().subscribe(data =>{
-      this.denuncias = data;
-    })
-
     this.estadisticasService.getEstadisticas().subscribe(data =>{
       this.estadisticas = data;
     })
   }
 
 
-  
+
+  principal2(){
+    this.router.navigateByUrl('/principal2');
+  }
 
   nuevoBar(){
     this.router.navigateByUrl('/nuevobar');
@@ -73,14 +66,6 @@ export class PrincipalComponent implements OnInit {
 
   usuarioToComunidad(){
     this.router.navigateByUrl('/usuariotocomunidad');
-  }
-
-  nuevaPublicacion(){
-    this.router.navigateByUrl('/nuevapublicacion');
-  }
-
-  nuevaDenuncia(){
-    this.router.navigateByUrl('/nuevadenuncia');
   }
 
 }

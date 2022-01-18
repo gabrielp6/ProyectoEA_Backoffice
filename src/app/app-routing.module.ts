@@ -17,6 +17,7 @@ import { ModificarPublicacionComponent } from './modificar-publicacion/modificar
 import { VerDenunciaComponent } from './ver-denuncia/ver-denuncia.component';
 import { NuevadenunciaComponent } from './nuevadenuncia/nuevadenuncia.component';
 import { ModificarDenunciaComponent } from './modificar-denuncia/modificar-denuncia.component';
+import { Principal2Component } from './principal2/principal2.component';
 
 
 
@@ -38,7 +39,8 @@ const routes: Routes = [
   { path: 'verpublicacion/:id', component: VerPublicacionComponent},
   { path: 'verdenuncia/:id', component: VerDenunciaComponent},
   { path: 'nuevadenuncia', component: NuevadenunciaComponent},
-  { path: 'modificardenuncia/:id', component: ModificarDenunciaComponent}
+  { path: 'modificardenuncia/:id', component: ModificarDenunciaComponent},
+  { path: 'principal2', component: Principal2Component}
 ];
 
 @NgModule({

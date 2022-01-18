@@ -1,0 +1,34 @@
+<div>
+    <button (click)="principal()" class="button2"> IR A USUARIOS, BARES Y COMUNIDADES</button>
+</div>
+
+<div class="listaUS">
+    <h2>LISTA DE PUBLICACIONES</h2>
+
+    <div>
+        <button (click)="nuevaPublicacion()" class="button"> AÑADIR PUBLICACION</button>
+    </div>
+
+    <div>
+        <app-datos-publicacion *ngFor="let publicacion of publicaciones"
+            [publicacion]="publicacion">
+        </app-datos-publicacion>
+    </div>
+
+
+</div>
+
+
+<div class="listaUS">
+<h2>LISTA DE DENUNCIAS</h2>
+
+<div>
+    <button (click)="nuevaDenuncia()" class="button"> AÑADIR DENUNCIA</button>
+</div>
+
+<div>
+    <app-datos-denuncias *ngFor="let denuncia of denuncias"
+        [denuncia]="denuncia">
+    </app-datos-denuncias>
+</div>
+</div>

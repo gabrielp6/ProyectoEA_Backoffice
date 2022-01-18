@@ -64,16 +64,6 @@
       </p>
 
       <p>
-        Likes: <input type="string" placeholder="Likes" formControlName="likes" />*
-        <ng-container
-          *ngIf="!formControls.likes.valid &&formControls.likes.touched">
-          <p *ngIf="formControls.likes.errors.required">
-            Este Campo es Obligatorio
-          </p>
-        </ng-container>
-      </p>
-
-      <p>
         <input type="submit" value="Eliminar" (click) = "delete()" />
         <input type="submit" value="Modificar" [disabled]="publicacionForm.invalid" />
         <input type="submit" value="Atrás" (click) = "atras()" />

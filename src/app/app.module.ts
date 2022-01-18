@@ -28,6 +28,7 @@ import { NuevadenunciaComponent } from './nuevadenuncia/nuevadenuncia.component'
 import { DatosDenunciasComponent } from './datos-denuncias/datos-denuncias.component';
 import { ModificarDenunciaComponent } from './modificar-denuncia/modificar-denuncia.component';
 import { DatosEstadisticasComponent } from './datos-estadisticas/datos-estadisticas.component';
+import { Principal2Component } from './principal2/principal2.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DatosEstadisticasComponent } from './datos-estadisticas/datos-estadisti
     NuevadenunciaComponent,
     DatosDenunciasComponent,
     ModificarDenunciaComponent,
-    DatosEstadisticasComponent
+    DatosEstadisticasComponent,
+    Principal2Component
   ],
   imports: [
     BrowserModule,

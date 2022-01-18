@@ -6,5 +6,4 @@ export interface Publicacion {
     texto: String;
     imageUrl: String;
     fecha: String;
-    likes: Number;
 }

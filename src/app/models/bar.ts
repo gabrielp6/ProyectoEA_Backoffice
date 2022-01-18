@@ -11,6 +11,10 @@ export interface Bar {
     descripcion: String;
     imageUrl: String;
     agresion: String;
+    idUserAgresion: String;
+    motivacionAgresion: String;
+    descAgresion: String;
+    solAgresion: String;
     longitud: String;
     latitud: String;
 }

@@ -39,11 +39,10 @@ export class NuevapublicacionComponent implements OnInit {
     const texto = this.publicacionForm.value.texto;
     const imageUrl = this.publicacionForm.value.imageUrl;
     const fecha = this.publicacionForm.value.fecha;
-    const likes = 0;
 
 
 
-    const publicacion = {'id': id, "idBar": idBar, 'nameBar': nameBar, 'imageBar': imageBar, 'texto': texto, 'imageUrl': imageUrl, 'fecha': fecha, 'likes': likes};
+    const publicacion = {'id': id, "idBar": idBar, 'nameBar': nameBar, 'imageBar': imageBar, 'texto': texto, 'imageUrl': imageUrl, 'fecha': fecha};
     this.publicacionService.addPublicacion(publicacion).subscribe(data =>{
       this.router.navigateByUrl('/principal');
     })

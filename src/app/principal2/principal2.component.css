@@ -1,12 +1,13 @@
 .lista{
     float: left;
+    margin-left: 4000px;
     background-color:#2c3e50;
 
 }
 
 .lista{
     float: center;
-
+    margin-left: 490px;
     margin-top: 20px;
     background-color:#2c3e50;
 

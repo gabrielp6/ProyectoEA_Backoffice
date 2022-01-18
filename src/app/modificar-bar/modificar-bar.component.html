@@ -127,6 +127,46 @@
     </p>
 
     <p>
+      idUserAgresion: <input type="string" placeholder="idUserAgresion" formControlName="idUserAgresion" />*
+      <ng-container
+        *ngIf="!formControls.idUserAgresion.valid &&formControls.idUserAgresion.touched">
+        <p *ngIf="formControls.idUserAgresion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Motivo agresion: <input type="string" placeholder="motivacionAgresion" formControlName="motivacionAgresion" />*
+      <ng-container
+        *ngIf="!formControls.motivacionAgresion.valid &&formControls.motivacionAgresion.touched">
+        <p *ngIf="formControls.motivacionAgresion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      descAgresion: <input type="string" placeholder="descAgresion" formControlName="descAgresion" />*
+      <ng-container
+        *ngIf="!formControls.descAgresion.valid &&formControls.descAgresion.touched">
+        <p *ngIf="formControls.descAgresion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Solucion agresion: <input type="string" placeholder="solAgresion" formControlName="solAgresion" />*
+      <ng-container
+        *ngIf="!formControls.solAgresion.valid &&formControls.solAgresion.touched">
+        <p *ngIf="formControls.solAgresion.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
       Longitud: <input type="string" placeholder="Longitud" formControlName="longitud" />*
       <ng-container
         *ngIf="!formControls.longitud.valid &&formControls.longitud.touched">

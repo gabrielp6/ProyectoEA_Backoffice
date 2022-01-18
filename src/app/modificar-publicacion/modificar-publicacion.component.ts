@@ -29,7 +29,6 @@ export class ModificarPublicacionComponent implements OnInit {
         texto: [this.publicacion.texto, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.publicacion.imageUrl, [Validators.required, Validators.nullValidator]],
         fecha: [this.publicacion.fecha, [Validators.required, Validators.nullValidator]],
-        likes: [this.publicacion.likes, [Validators.required, Validators.nullValidator]],
       });
     })
   }
@@ -53,9 +52,8 @@ export class ModificarPublicacionComponent implements OnInit {
     const texto = this.publicacionForm.value.texto;
     const imageUrl = this.publicacionForm.value.imageUrl;
     const fecha = this.publicacionForm.value.fecha;
-    const likes = this.publicacionForm.value.likes;
 
-    const publicacionmodificada = {'id': id, 'idBar': idBar, 'nameBar': nameBar, 'imageBar': imageBar, "texto": texto, 'imageUrl': imageUrl, "fecha": fecha, "likes": likes};
+    const publicacionmodificada = {'id': id, 'idBar': idBar, 'nameBar': nameBar, 'imageBar': imageBar, "texto": texto, 'imageUrl': imageUrl, "fecha": fecha};
     this.publicacionService.modificarPublicacion(publicacionmodificada, this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.router.navigateByUrl('/principal');
     })

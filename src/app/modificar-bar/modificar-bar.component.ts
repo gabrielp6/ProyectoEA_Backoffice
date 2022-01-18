@@ -34,6 +34,10 @@ export class ModificarbarComponent implements OnInit {
         descripcion: [this.bar.descripcion, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.bar.imageUrl, [Validators.required, Validators.nullValidator]],
         agresion: [this.bar.agresion, [Validators.required, Validators.nullValidator]],
+        idUserAgresion: [this.bar.idUserAgresion, [Validators.required, Validators.nullValidator]],
+        motivacionAgresion: [this.bar.motivacionAgresion, [Validators.required, Validators.nullValidator]],
+        descAgresion: [this.bar.descAgresion, [Validators.required, Validators.nullValidator]],
+        solAgresion: [this.bar.solAgresion, [Validators.required, Validators.nullValidator]],
         longitud: [this.bar.longitud, [Validators.required, Validators.nullValidator]],
         latitud: [this.bar.latitud, [Validators.required, Validators.nullValidator]]
       });
@@ -64,11 +68,15 @@ export class ModificarbarComponent implements OnInit {
     const descripcion = this.barForm.value.descripcion;
     const imageUrl = this.barForm.value.imageUrl;
     const agresion = this.barForm.value.agresion;
+    const idUserAgresion = this.barForm.value.idUserAgresion;
+    const motivacionAgresion = this.barForm.value.motivacionAgresion;
+    const descAgresion = this.barForm.value.descAgresion;
+    const solAgresion = this.barForm.value.solAgresion;
     const longitud = this.barForm.value.longitud;
     const latitud = this.barForm.value.latitud;
 
 
-    const barmodificado = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, "owner": owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion, "longitud": longitud, "latitud": latitud};
+    const barmodificado = {'id': id, 'name': name, 'address': address, 'musicTaste': musicTaste, "owner": owner, 'idOwner': idOwner, "aforo": aforo, "aforoMax": aforoMax, "horario": horario, "descripcion": descripcion, "imageUrl": imageUrl, "agresion": agresion, "idUserAgresion": idUserAgresion, "motivacionAgresion": motivacionAgresion, "descAgresion": descAgresion, "solAgresion": solAgresion , "longitud": longitud, "latitud": latitud};
     this.barService.modificarBar(barmodificado, this.route.snapshot.paramMap.get('id')).subscribe(data => {
       this.router.navigateByUrl('/principal');
     })

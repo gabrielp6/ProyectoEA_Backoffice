@@ -32,7 +32,6 @@ export class VerPublicacionComponent implements OnInit {
         texto: [this.publicacion.texto, [Validators.required, Validators.nullValidator]],
         imageUrl: [this.publicacion.imageUrl, [Validators.required, Validators.nullValidator]],
         fecha: [this.publicacion.fecha, [Validators.required, Validators.nullValidator]],
-        likes: [this.publicacion.likes, [Validators.required, Validators.nullValidator]]
       });
     })
   }
