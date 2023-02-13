@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0e1f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="btnContainer">
+        <button (click)="newColony()" class="btn">AÑADIR COLONIA</button>
+    </div>
+
+    <div class="div1"></div>
+
+    <div class="row">
+        <div class="column">
+            <app-data-colonies *ngFor="let colony of colonies3" [colony]="colony">
+            </app-data-colonies>   
+        </div>
+
+        <div class="column">
+            <app-data-colonies *ngFor="let colony of colonies2" [colony]="colony">
+            </app-data-colonies>
+
+        </div>
+
+        <div class="column">
+            <app-data-colonies *ngFor="let colony of colonies1" [colony]="colony">
+            </app-data-colonies>
+        </div>
+    </div>
+
+    <div class="div2"></div>
+</body>
+
+</html>

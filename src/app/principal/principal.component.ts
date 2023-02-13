@@ -1,17 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../models/usuario';
-import { BarService } from '../services/bar.service';
-import { UsuarioService } from '../services/usuario.service';
-import { Bar } from '../models/bar';
-import { Comunidad } from '../models/comunidad';
-import { ComunidadService } from '../services/comunidad.service';
-import { Publicacion } from '../models/publicacion';
-import { PublicacionService } from '../services/publicacion.service';
-import { Denuncia } from '../models/denuncia';
-import { DenunciaService } from '../services/denuncia.service';
-import { Estadisticas } from '../models/estadisticas';
-import { EstadisticasService } from '../services/estadisticas.service';
+import { User } from '../models/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-principal',
@@ -20,52 +10,47 @@ import { EstadisticasService } from '../services/estadisticas.service';
 })
 export class PrincipalComponent implements OnInit {
 
-  bares: Bar[];
-  usuarios : Usuario[];
-  comunidades: Comunidad[];
-  estadisticas: Estadisticas[];
 
-  constructor(private router: Router, private estadisticasService: EstadisticasService, private barService : BarService, private usuarioService : UsuarioService, private comunidadService: ComunidadService) { }
+  users: User[];
+  users1: User[];
+  users2: User[];
+  users3: User[];
+  index: number;
+
+
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
 
-    this.barService.getBares().subscribe(data =>{
-      this.bares = data;
+    this.userService.getUsers().subscribe(data => {
+      this.users = data;
+      this.users1 = [];
+      this.users2 = [];
+      this.users3 = [];
+      let i: number = 0;
+      let y: number = this.users.length;
+
+      while (i <= y) {
+        if (i == 0) {
+          this.users1.push(this.users[y - i]);
+        }
+        if (i == 1) {
+          this.users2.push(this.users[y - i]);
+        }
+        if (i == 2) {
+          this.users3.push(this.users[y - i]);
+          y = y - 3;
+          i = -1;
+        }
+        i++;
+
+      }
     })
-
-    this.usuarioService.getUsuarios().subscribe(data =>{
-      this.usuarios = data;
-    })
-
-    this.comunidadService.getComunidades().subscribe(data =>{
-      this.comunidades = data;
-    })
-
-    this.estadisticasService.getEstadisticas().subscribe(data =>{
-      this.estadisticas = data;
-    })
   }
 
 
-
-  principal2(){
-    this.router.navigateByUrl('/principal2');
-  }
-
-  nuevoBar(){
-    this.router.navigateByUrl('/nuevobar');
-  }
-
-  nuevoUsuario(){
-    this.router.navigateByUrl('/nuevousuario');
-  }
-
-  nuevaComunidad(){
-    this.router.navigateByUrl('/nuevacomunidad');
-  }
-
-  usuarioToComunidad(){
-    this.router.navigateByUrl('/usuariotocomunidad');
+  newUser() {
+    this.router.navigateByUrl('/newUser');
   }
 
 }

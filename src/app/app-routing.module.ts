@@ -1,46 +1,47 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ModificarbarComponent } from './modificar-bar/modificar-bar.component';
-import { NuevobarComponent } from './nuevobar/nuevobar.component';
 import { PrincipalComponent } from './principal/principal.component';
-import { NuevousuarioComponent } from './nuevousuario/nuevousuario.component';
-import { ModificarUsuarioComponent } from './modificar-usuario/modificar-usuario.component';
-import { VerUsuarioComponent } from './ver-usuario/ver-usuario.component';
-import { VerBarComponent } from './ver-bar/ver-bar.component';
-import { NuevacomunidadComponent } from './nuevacomunidad/nuevacomunidad.component';
-import { VerComunidadComponent } from './ver-comunidad/ver-comunidad.component';
-import { ModificarComunidadComponent } from './modificar-comunidad/modificar-comunidad.component';
-import { UsuarioToComunidadComponent } from './usuarioToComunidad/usuarioToComunidad.component';
-import { NuevapublicacionComponent } from './nuevapublicacion/nuevapublicacion.component';
-import { VerPublicacionComponent } from './ver-publicacion/ver-publicacion.component';
-import { ModificarPublicacionComponent } from './modificar-publicacion/modificar-publicacion.component';
-import { VerDenunciaComponent } from './ver-denuncia/ver-denuncia.component';
-import { NuevadenunciaComponent } from './nuevadenuncia/nuevadenuncia.component';
-import { ModificarDenunciaComponent } from './modificar-denuncia/modificar-denuncia.component';
-import { Principal2Component } from './principal2/principal2.component';
+import { NewUserComponent } from './newuser/newuser.component';
+import { ModifyUserComponent } from './modify-user/modify-user.component';
+import { SeeUserComponent } from './see-user/see-user.component';
+import { PrincipalCatComponent } from './principalCat/principal.component';
+import { NewCatComponent } from './newcat/newcat.component';
+import { ModifyCatComponent } from './modify-cat/modify-cat.component';
+import { SeeCatComponent } from './see-cat/see-cat.component';
+import { ModifyObjectComponent } from './modify-object/modify-object.component';
+import { ModifyColonyComponent } from './modify-colony/modify-colony.component';
+import { SeeObjectComponent } from './see-object/see-object.component';
+import { SeeColonyComponent } from './see-colony/see-colony.component';
+import { NewObjectComponent } from './newobject/newobject.component';
+import { NewColonyComponent } from './newcolony/newcolony.component';
+import { PrincipalObjectComponent } from './principalObject/principal.component';
+import { PrincipalColonyComponent } from './principalColony/principal.component';
+import { LoginComponent } from './login/login.component';
 
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '/principal' },
+  { path: '', pathMatch: 'full', redirectTo: '/login' },
   { path: 'principal', component: PrincipalComponent},
-  { path: 'nuevobar', component: NuevobarComponent},
-  { path: 'verbar/:id', component: VerBarComponent},
-  { path: 'modificarbar/:id', component: ModificarbarComponent},
-  { path: 'nuevousuario', component: NuevousuarioComponent},
-  { path: 'verusuario/:id', component: VerUsuarioComponent},
-  { path: 'modificarusuario/:id', component: ModificarUsuarioComponent},
-  { path: 'nuevacomunidad', component: NuevacomunidadComponent},
-  { path: 'vercomunidad/:id', component: VerComunidadComponent},
-  { path: 'modificarcomunidad/:id', component: ModificarComunidadComponent},
-  { path: 'usuariotocomunidad', component: UsuarioToComunidadComponent},
-  { path: 'nuevapublicacion', component: NuevapublicacionComponent},
-  { path: 'modificarpublicacion/:id', component: ModificarPublicacionComponent},
-  { path: 'verpublicacion/:id', component: VerPublicacionComponent},
-  { path: 'verdenuncia/:id', component: VerDenunciaComponent},
-  { path: 'nuevadenuncia', component: NuevadenunciaComponent},
-  { path: 'modificardenuncia/:id', component: ModificarDenunciaComponent},
-  { path: 'principal2', component: Principal2Component}
+  { path: 'login', component: LoginComponent},
+  { path: 'principalCat', component: PrincipalCatComponent},
+  { path: 'principalColony', component: PrincipalColonyComponent},
+  { path: 'principalObject', component: PrincipalObjectComponent},
+  { path: 'newUser', component: NewUserComponent},
+  { path: 'newCat', component: NewCatComponent},
+  { path: 'newColony', component: NewColonyComponent},
+  { path: 'newObject', component: NewObjectComponent},
+  { path: 'seeUser/:id', component: SeeUserComponent},
+  { path: 'seeCat/:id', component: SeeCatComponent},
+  { path: 'seeColony/:id', component: SeeColonyComponent},
+  { path: 'seeObject/:id', component: SeeObjectComponent},
+  { path: 'modifyUser/:id', component: ModifyUserComponent},  
+  { path: 'modifyCat/:id', component: ModifyCatComponent},
+  { path: 'modifyColony/:id', component: ModifyColonyComponent},
+  { path: 'modifyObject/:id', component: ModifyObjectComponent},
+
+
+
 ];
 
 @NgModule({

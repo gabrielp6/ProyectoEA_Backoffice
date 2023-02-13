@@ -1,0 +1,17 @@
+<div class="data-objects" *ngIf="object">
+    <h2>
+        {{object.name}}
+    </h2>
+
+    <p>
+        Descripción: {{object.description}}
+    </p>
+
+    <button (click)="see()">
+        Ver detalle
+    </button>
+
+    <button (click)="modify()">
+        Modificar
+    </button>
+</div>

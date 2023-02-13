@@ -1,0 +1,63 @@
+<div>
+
+  <div>
+    <div class="div1"></div>
+  </div>
+
+  <h2>Crear colonia</h2>
+  <form [formGroup]="colonyForm" (ngSubmit)="addColony()">
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      Name*: <input type="string" placeholder="Nombre" formControlName="name" />
+      <ng-container *ngIf="!formControls.name.valid && formControls.name.touched">
+        <p *ngIf="formControls.name.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Latitud*: <input type="string" placeholder="Latitud" formControlName="locationx" />
+      <ng-container *ngIf="!formControls.locationx.valid && formControls.locationx.touched">
+        <p *ngIf="formControls.locationx.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Longitud*: <input type="string" placeholder="Longitud" formControlName="locationy" />
+      <ng-container *ngIf="!formControls.locationy.valid && formControls.locationy.touched">
+        <p *ngIf="formControls.locationy.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Observaciones*: <input type="string" placeholder="Observaciones" formControlName="observations" />
+      <ng-container *ngIf="!formControls.observations.valid && formControls.observations.touched">
+        <p *ngIf="formControls.observations.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      <input type="submit" value="Crear" [disabled]="colonyForm.invalid" />
+      <input type="submit" value="Atrás" (click)="return()" />
+    </p>
+  </form>
+
+  <div>
+    <div class="div2"></div>
+  </div>
+</div>

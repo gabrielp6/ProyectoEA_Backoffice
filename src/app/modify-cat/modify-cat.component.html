@@ -1,0 +1,90 @@
+<div>
+
+  <div>
+    <div class="div1"></div>
+  </div>
+
+  <h2>Modificar gato: {{cat.name}}</h2>
+  <form [formGroup]="catForm" (ngSubmit)="modifyCat()">
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      Name*: <input type="string" placeholder="Nombre" formControlName="name" />
+      <ng-container *ngIf="!formControls.name.valid && formControls.name.touched">
+        <p *ngIf="formControls.name.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Sexo*: <input type="string" placeholder="Sexo" formControlName="sex" />
+      <ng-container *ngIf="!formControls.sex.valid && formControls.sex.touched">
+        <p *ngIf="formControls.sex.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Peso (En kg)*: <input type="string" placeholder="Peso" formControlName="weight" />
+      <ng-container *ngIf="!formControls.weight.valid && formControls.weight.touched">
+        <p *ngIf="formControls.weight.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Compatibilidades*: <input type="string" placeholder="Compatibilidades" formControlName="compatibilities" />
+      <ng-container *ngIf="!formControls.compatibilities.valid && formControls.compatibilities.touched">
+        <p *ngIf="formControls.compatibilities.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Incompatibilidades*: <input type="string" placeholder="Incompatibilidades" formControlName="incompatibilities" />
+      <ng-container *ngIf="!formControls.incompatibilities.valid && formControls.incompatibilities.touched">
+        <p *ngIf="formControls.incompatibilities.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Enfermedades*: <input type="string" placeholder="Enfermedades" formControlName="diseases" />
+      <ng-container *ngIf="!formControls.diseases.valid && formControls.diseases.touched">
+        <p *ngIf="formControls.diseases.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      URL imagen*: <input type="string" placeholder="URL imagen" formControlName="imageUrl" />
+      <ng-container *ngIf="!formControls.imageUrl.valid && formControls.imageurl.touched">
+        <p *ngIf="formControls.imageUrl.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      <input type="submit" value="Eliminar" (click)="deleteCat()" />
+      <input type="submit" value="Modificar" (click)="modifyCat()" />
+      <input type="submit" value="Atrás" (click)="return()" />
+    </p>
+  </form>
+  <div>
+    <div class="div2"></div>
+  </div>
+</div>

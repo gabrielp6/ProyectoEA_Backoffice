@@ -1,0 +1,17 @@
+<div class="data-colonies" *ngIf="colony">
+    <h2>
+        {{colony.name}}
+    </h2>
+
+    <p>
+        Observaciones: {{colony.observations}}
+    </p>
+
+    <button (click)="see()">
+        Ver detalle
+    </button>
+
+    <button (click)="modify()">
+        Modificar
+    </button>
+</div>

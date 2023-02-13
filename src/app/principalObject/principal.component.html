@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0e1f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="btnContainer">
+        <button (click)="newObject()" class="btn">AÑADIR UN ARTICULO</button>
+    </div>
+
+    <div class="div1"></div>
+
+    <div class="row">
+        <div class="column">
+            <app-data-objects *ngFor="let object of objects3" [object]="object">
+            </app-data-objects>   
+        </div>
+
+        <div class="column">
+            <app-data-objects *ngFor="let object of objects2" [object]="object">
+            </app-data-objects>
+
+        </div>
+
+        <div class="column">
+            <app-data-objects *ngFor="let object of objects1" [object]="object">
+            </app-data-objects>
+        </div>
+    </div>
+
+    <div class="div2"></div>
+</body>
+
+</html>

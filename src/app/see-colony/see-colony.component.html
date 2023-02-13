@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0e1f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="btnContainer">
+        <button (click)="return()" class="btn">Atrás</button>
+    </div>
+
+    <div>
+        <div class="div3"></div>
+    </div>
+
+
+
+    <h2>
+        {{colony.name}}
+    </h2>
+
+    <div>
+        <div class="div2"></div>
+    </div>
+
+    <p>
+        Latitud
+    </p>
+
+    <h1>
+        {{colony.locationx}}
+    </h1>
+
+    <div>
+        <div class="div2"></div>
+    </div>
+
+    <p>
+        Longitud
+    </p>
+
+    <h1>
+        {{colony.locationy}}
+    </h1>
+
+    <div>
+        <div class="div2"></div>
+    </div>
+
+    <p>
+        Observaciones
+    </p>
+
+    <h1>
+        {{colony.observations}}
+    </h1>
+
+    <div>
+        <div class="div2"></div>
+    </div>
+
+    <p>
+        Gatos
+    </p>
+    
+    <table>
+        <tr *ngFor=" let cat of colony.cats">
+            <td>{{cat.name}}</td>
+        </tr>
+    </table>
+
+    <div>
+        <div class="div1"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<div>
+
+  <div>
+    <div class="div1"></div>
+  </div>
+
+  <h2>Crear usuario</h2>
+  <form [formGroup]="userForm" (ngSubmit)="addUser()">
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      Username: <input type="string" placeholder="Nombre de usuario" formControlName="username" />*
+      <ng-container *ngIf="!formControls.username.valid &&formControls.username.touched">
+        <p *ngIf="formControls.username.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Password: <input type="password" placeholder="Contraseña" formControlName="password" />*
+      <ng-container *ngIf="!formControls.password.valid &&formControls.password.touched">
+        <p *ngIf="formControls.password.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Email: <input type="string" placeholder="Correo electrónico" formControlName="email" />*
+      <ng-container *ngIf="!formControls.email.valid &&formControls.email.touched">
+        <p *ngIf="formControls.email.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      <input type="submit" value="Crear"  (click)="addUser()"/>
+      <input type="submit" value="Atrás" (click)="return()" />
+    </p>
+  </form>
+
+  <div>
+    <div class="div2"></div>
+  </div>
+</div>

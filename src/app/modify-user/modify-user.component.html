@@ -1,0 +1,64 @@
+<div>
+
+  <div>
+    <div class="div1"></div>
+  </div>
+
+  <h2>Modificar usuario: {{user.username}}</h2>
+  <form [formGroup]="userForm" (ngSubmit)="modifyUser()">
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      ID user*: <input type="string" placeholder="ID user" formControlName="id" />
+      <ng-container *ngIf="!formControls.id.valid && formControls.id.touched">
+        <p *ngIf="formControls.id.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Username*: <input type="string" placeholder="Username" formControlName="username" />
+      <ng-container *ngIf="!formControls.username.valid && formControls.username.touched">
+        <p *ngIf="formControls.username.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Email*: <input type="string" placeholder="Email" formControlName="email" />
+      <ng-container *ngIf="!formControls.email.valid && formControls.email.touched">
+        <p *ngIf="formControls.email.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      URL imagen*: <input type="string" placeholder="URL imagen" formControlName="imageUrl" />
+      <ng-container *ngIf="!formControls.imageUrl.valid && formControls.imageurl.touched">
+        <p *ngIf="formControls.imageUrl.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      <input type="submit" value="Eliminar" (click)="deleteUser()" />
+      <input type="submit" value="Modificar" (click)="modifyUser()" />
+      <input type="submit" value="Atrás" (click)="return()" />
+      <input type="submit" value="Dar permisos administradora" (click)="addPermision()" />
+    </p>
+  </form>
+  <div>
+    <div class="div2"></div>
+  </div>
+</div>

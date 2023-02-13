@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0e1f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="btnContainer">
+        <button (click)="return()" class="btn">Atrás</button>
+    </div>
+
+    <div>
+        <div class="div3"></div>
+    </div>
+
+
+    <div class="data-users" *ngIf="user">
+        <form [formGroup]="userForm" (ngSubmit)="see()">
+            <h2>
+                {{user.username}}
+            </h2>
+
+            <div>
+                <div class="div2"></div>
+            </div>
+
+            <p>
+                ID
+            </p>
+
+            <h1>
+                {{user.id}}
+            </h1>
+
+            <div>
+                <div class="div2"></div>
+            </div>
+
+            <p>
+                Username
+            </p>
+
+            <h1>
+                {{user.username}}
+            </h1>
+
+            <div>
+                <div class="div2"></div>
+            </div>
+
+            <p>
+                Correo electrónico
+            </p>
+
+            <h1>
+                {{user.email}}
+            </h1>
+
+            <div>
+                <div class="div2"></div>
+            </div>
+
+            <p>
+                Password
+            </p>
+
+            <h1>
+                {{user.password}}
+            </h1>
+
+            <div>
+                <div class="div2"></div>
+            </div>
+
+            <p>
+                Dirección imagen
+            </p>
+
+            <h1>
+                {{user.imageUrl}}
+            </h1>
+
+        </form>
+
+
+    </div>
+
+
+
+
+    <div>
+        <div class="div1"></div>
+    </div>
+</body>
+
+</html>

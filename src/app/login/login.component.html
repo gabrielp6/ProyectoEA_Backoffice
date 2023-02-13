@@ -1,0 +1,44 @@
+<div>
+
+  <div>
+    <div class="div1"></div>
+  </div>
+
+  <h2>Iniciar sesión</h2>
+  <form [formGroup]="userForm" (ngSubmit)="login()">
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      Email: <input type="string" placeholder="Correo electrónico" formControlName="email" />*
+      <ng-container *ngIf="!formControls.email.valid &&formControls.email.touched">
+        <p *ngIf="formControls.email.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <p>
+      Password: <input type="password" placeholder="Contraseña" formControlName="password" />*
+      <ng-container *ngIf="!formControls.password.valid &&formControls.password.touched">
+        <p *ngIf="formControls.password.errors.required">
+          Este Campo es Obligatorio
+        </p>
+      </ng-container>
+    </p>
+
+    <div>
+      <div class="div1"></div>
+    </div>
+
+    <p>
+      <input type="submit" value="Iniciar sesión"  (click)="login()"/>
+    </p>
+  </form>
+
+  <div>
+    <div class="div2"></div>
+  </div>
+</div>

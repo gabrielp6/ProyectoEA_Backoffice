@@ -1,0 +1,17 @@
+<div class="data-cats" *ngIf="cat">
+    <h2>
+        {{cat.name}}
+    </h2>
+
+    <p>
+        Colonia: {{cat.colony.name}}
+    </p>
+
+    <button (click)="see()">
+        Ver detalle
+    </button>
+
+    <button (click)="modify()">
+        Modificar
+    </button>
+</div>

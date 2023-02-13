@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #f0e1f8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="btnContainer">
+        <button (click)="newCat()" class="btn">AÑADIR UN GATO</button>
+    </div>
+
+    <div class="div1"></div>
+
+    <div class="row">
+        <div class="column">
+            <app-data-cats *ngFor="let cat of cats3" [cat]="cat">
+            </app-data-cats>   
+        </div>
+
+        <div class="column">
+            <app-data-cats *ngFor="let cat of cats2" [cat]="cat">
+            </app-data-cats>
+
+        </div>
+
+        <div class="column">
+            <app-data-cats *ngFor="let cat of cats1" [cat]="cat">
+            </app-data-cats>
+        </div>
+    </div>
+
+    <div class="div2"></div>
+</body>
+
+</html>
